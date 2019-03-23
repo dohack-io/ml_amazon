@@ -1,1 +1,1 @@
-# Amazon Price Progonosis by ML/AI
+# Amazon Price Prognosis by ML/AI
