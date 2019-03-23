@@ -6,8 +6,8 @@ function formatKeepaData(keepa_json_path) {
  
     var amazon_prices = [];
     for (var i = 0; i < amazon_data.length; i++) {
-          if(amazon_data[i]%2==1 && i != 0)
-          data_array.push({'date': amazon_data[i-1], 'price': amazon_data[i]});
+          if(i%2==1 && i != 0 && amazon_data[i]!=-1)
+            data_array.push({'date': amazon_data[i-1], 'price': amazon_data[i]});
     };
     var tensor_data = JSON.stringify(data_array);
     return tensor_data;
@@ -22,5 +22,5 @@ function average(data){
     return avg;
   }
 
-var formatData =  formatKeepaData('./data.json');
+var formatData = formatKeepaData("./data.json");
 //console.log(formatData);
